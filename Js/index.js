@@ -1,12 +1,15 @@
 document.addEventListener("scroll", (scroll)=>{
+    var navbarBg = document.getElementsByClassName("background")[0];
     if(pageYOffset>120){
-        document.getElementsByClassName("background")[0].style.backgroundColor = "white";
+        navbarBg.setAttribute("style","background-color: white;opacity: 0.7;");
         document.querySelectorAll(".nav-links>a").forEach(function(element){
             element.style.color="black";
+            element.style.opacity="1";
         });
+        document.querySelector(".brand-logo>a>img").style.opacity="1";
     }
     else{
-        document.getElementsByClassName("background")[0].style.backgroundColor = "transparent";
+        navbarBg.setAttribute("style","background-color: transparent;opacity: 1;");
         document.querySelectorAll(".nav-links>a").forEach(function(element){
             element.style.color="white";
         });
