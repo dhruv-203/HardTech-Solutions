@@ -1,7 +1,7 @@
 document.addEventListener("scroll", (scroll)=>{
     var navbarBg = document.getElementsByClassName("background")[0];
-    if(pageYOffset>120){
-        navbarBg.setAttribute("style","background-color: white;opacity: 0.7;");
+    if(scrollY>120){
+        navbarBg.setAttribute("style","background-color: #fa9673;");
         document.querySelectorAll(".nav-links>a").forEach(function(element){
             element.style.color="black";
             element.style.opacity="1";
@@ -9,7 +9,7 @@ document.addEventListener("scroll", (scroll)=>{
         document.querySelector(".brand-logo>a>img").style.opacity="1";
     }
     else{
-        navbarBg.setAttribute("style","background-color: transparent;opacity: 1;");
+        navbarBg.setAttribute("style","background-color: transparent;");
         document.querySelectorAll(".nav-links>a").forEach(function(element){
             element.style.color="white";
         });

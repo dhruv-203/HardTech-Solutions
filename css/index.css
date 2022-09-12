@@ -1,20 +1,20 @@
 html,body{
-    height:400vh;width: 100vw;
+    height:auto;width:100vw;
 }
 *{
     margin: 0;padding: 0;
 }
 
 .img{
-    width:7vw;
-    height:11vh;
-    position: relative;
-    top:-1vh;
-    transition: scale 0.1s;
-    -webkit-transition: scale 0.1s;
-    -moz-transition: scale 0.1s;
-    -ms-transition: scale 0.1s;
-    -o-transition: scale 0.1s;
+    width: 13vw;
+height: 23vh;
+position: relative;
+top: -1vh;
+transition: scale 0.1s;
+-webkit-transition: scale 0.1s;
+-moz-transition: scale 0.1s;
+-ms-transition: scale 0.1s;
+-o-transition: scale 0.1s;
 }
 .img-bg{
     height: 100vh;
@@ -50,8 +50,8 @@ body{
     right:-6vw;
 }
 .nav-links-cont{
-    left:39vw;
-    gap:7vw;
+    left: 33vw;
+    gap: 7vw;
     position: relative;
 }
 .navlink-cont{
@@ -59,9 +59,9 @@ body{
     height: 100%;
     width: 100%;
 }
-a{
+.nav-links-cont>li>a{
     opacity: 0.8;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     font-family: 'Roboto', sans-serif;
     color:white;
     letter-spacing: 1.5px;
@@ -72,9 +72,9 @@ a{
     -ms-transition: font-size 0.1s;
     -o-transition: font-size 0.1s;
 }
-a:hover{
+.nav-links-cont>li>a:hover{
     opacity: 1;
-    font-size:1.3rem;
+    font-size:1.6vw;
 }
 .img:hover{
     transform: scale(1.1,1.1) ;
@@ -84,51 +84,169 @@ a:hover{
     -o-transform: scale(1.1,1.1) ;
 }
 .company-Info{
-    min-width: 40vw;
-    max-height: 70vh;
-    height: 59%;
-    width: 71%;
+    min-width: 520px;
+    /* max-height: 400px; */
+    display: flex;
+    height: 59vh;
+    width: 71vw;
     background-color: #EEC9BC;
     position: absolute;
-    left: 14vw;
-    top: 26vh;
+    left: 15%;
+    top: 25%;
     opacity: 0.9;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    animation: fade-in 1s ease-in-out;
+    -webkit-animation: fade-in 1s ease-in-out;
 }
 
 .company-text{
-    position: relative;
-    left: 24vw;
-    top: 15vh;
-    height: auto;
-    width: auto;
-    font-size: 4em;
+    display: flex;
+    height: 25vh;
+    width: 42vw;
+    font-size: 4vw;
     font-weight: 700;
+    min-width: 300px;
     color: blue;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 3.2px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: center;
 
 }
 .company-logo{
     background-image: url(../images/repair.png);
-    width: 26vw;
-    height: 20vw;
-    position: absolute;
-    top: 12vh;
-    left: 4vw;
+    width: 28%;
+    height: 66%;
+    /* position: absolute; */
+    /* top: 21%; */
+    /* left: 7%; */
     background-repeat: no-repeat;
     background-size: contain;
+    animation: fade-in 1s ease-in-out;
+    -webkit-animation: fade-in 1s ease-in-out;
 }
 .brand-title{
     position: relative;
     left: 53px;
     top: 5vh;
+    opacity: 1;
+    animation-delay: 2s;
+    animation: fade-in 1s ease-in-out;
+    -webkit-animation: fade-in 1s ease-in-out;
+}
+@keyframes fade-in {
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+        -moz-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+        -o-transform: translateY(50px);
+}
+    to{
+        transform: translateY(0);
+        opacity: 0.9;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
 }
 
 .brand-tag-line{
     position: relative;
     left: 5vw;
     top: 9vh;
-    font-size: 2rem;
+    font-size: 2vw;
     letter-spacing: normal;
     color: darkblue;
+    animation: fade-in 1s ease-in-out;
+    -webkit-animation: fade-in 1s ease-in-out;
+}
+
+.info-box{
+    width: 100vw;
+    height: 40vh;
+    background-color: grey;
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.info-text{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    /* top:31%; */
+}
+.service-panel{
+    background-color: aqua;
+    height: 80%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    font-weight: 400;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 0.3vh; */
+    padding: 7vh 0 7vh 0;
+}
+.service-panel>div{
+    height: 67vh;
+    width: 25vw;
+    background-color: #FC4445;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:azure;
+    gap: 0.6vh;
+    font-size: 1.5vw;
+    text-align: center;
+    padding: 2vw;
+    box-sizing:content-box;
+    justify-content: space-evenly;
+    animation: fade-in 1s ease-in-out;
+    -webkit-animation: fade-in 1s ease-in-out;
+}
+.img-cont{
+    width: 61%;
+    height: 49%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.service-panel>div>a{
+    height: 13%;
+    width: 68%;
+}
+.launch{
+    width:100%;
+    height: 100%;
+    background-color:#55BCCC;
+    color: white;
+    font-size: 1.5vw;
+    border:0.3vw solid black;
+    border-radius: 6vw;
+    -webkit-border-radius: 6vw;
+    -moz-border-radius: 6vw;
+    -ms-border-radius: 6vw;
+    -o-border-radius: 6vw;
+}
+.text{
+    padding: 10px;
+    opacity: 1;
+}
+.title>h2{
+    letter-spacing: 0.1vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.market-place{
+
 }
