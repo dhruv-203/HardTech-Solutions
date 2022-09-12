@@ -19,7 +19,7 @@
         <ul class="navlink-cont flex-horizontal">
             <div class="brand-name-container">
                 <li class="nav-links brand-logo">
-                <a href="../html/index.html" ><img src="../images/logo.png" class="img" alt="HardTech-Solution"></a></li>
+                <a href="../html/index.php" ><img src="../images/logo.png" class="img" alt="HardTech-Solution"></a></li>
         </div>
         <div class="nav-links-cont flex-horizontal">
             <li class="nav-links"><a class="active" href="#">Home</a></li>
