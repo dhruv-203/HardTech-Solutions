@@ -1,3 +1,10 @@
+<?php
+$connect = mysqli_connect("localhost","root","","users");
+            $stmt = $connect->prepare("SELECT PRODUCT_NAME,PRODUCT_IMG,PRICE,PRODUCT_DESCRIP from MarketPlace");
+			$stmt->execute();
+			$stmt_result = $stmt->get_result();
+            $data = $stmt_result->fetch_all();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +62,7 @@
         <a href="#"><button class="launch">Know More</button></a>
     </div>
     <div class="laptop">
-        <div class="img-cont" style="background-image: url(../images/laptop-repair.jpg); width:80%;height:40%;" ></div>
+        <div class="img-cont" style="background-image: url(../images/lap_repair.png); width:67%;height:48%;" ></div>
         <div class="title"><h2>Laptops</h2></div>
         <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur harum voluptatum iusto explicabo eius doloribus quaerat veritatis </div>
         <a href="#"><button class="launch">Know More</button></a>
@@ -69,6 +76,22 @@
         <a href="#"><button class="launch">Know More</button></a>
     </div>
 </div>
-<div class="market-place"></div>
+<div class="products">
+<h1 class="market_title">Market Place: </h1>
+<div class="market-place">
+    <?php for($i=0;$i<3;$i++){ ?>
+    <div class="product-cont">
+        <div class="Product-Img" style="height:40%; width:80%;"><?php echo '<img src="data:image;base64,'.base64_encode($data[$i][1]).'" style="height:100%;width:100%;" alt="img">';?></div>
+       <div class="write-up">
+       <div class="Product-Name"><b> Product-Name:</b> <?php echo $data[$i][0];?></div>
+        <div class="Product-Price"><b>Price:</b><?php echo $data[$i][2];?></div>
+        <div class="Product-Desc"><b style="font-size: 1.5rem;">Description:</b><?php echo $data[$i][3];?></div>
+       </div>
+    </div>
+    <?php }?>
+
+</div>
+<a href="#"><button class="launch" style="padding:10px;background-color:#9db426;">Show-More</button></a>
+</div>
 </body>
 </html>
