@@ -15,4 +15,7 @@ document.addEventListener("scroll", (scroll)=>{
         });
     }
 });
+function popup(){
+    document.getElementsByClassName("mobile")[0].innerHTML ="";
+}
 
