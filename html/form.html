@@ -10,28 +10,27 @@
 </head>
 
 <body>
-    <a href="#"  class="back"></a>
-    <form action="post" class="Form-Mobile">
-        <table border="1" >
+      <button id='mobile' class='back' ></button>
+    <form action='query_sub.php' method='POST' class='Form-Mobile'>
+        <table cellpadding='4' style='height:100%;width:100%;'>
             <tr>
-                <td><label for="name">Enter Your Name: </label></td>
-                <td><input type="text" name="NAME" id="name"></td>
-
+                <td> <label for='name'>Enter Your Name: </label> </td>
+                <td style='text-align:center'> <input type='text' name='NAME' id='name'> </td>
             </tr>
             <tr>
-                <td><label for="email">Enter Your Mail: </label></td>
-                <td><input type="email" name="EMAIL" id="email"></td>
+                <td> <label for='email'>Enter Your Mail: </label> </td>
+                <td style='text-align:center'><input type='email' name='EMAIL' id='email'></td>
             </tr>
             <tr>
-                <td><label for="phone">Enter Your Phone No: </label></td>
-                <td><input type="number"></td>
+                <td><label for='phone'>Enter Your Phone No: </label></td>
+                <td style='text-align:center'><input type='tel'></td>
             </tr>
             <tr>
-                <td><label for="query">Enter Problem With Your Device: </label></td>
-                <td><textarea name="PROBLEM" id="query" cols="30" rows="6"></textarea></td>
+                <td><label for='query'>Enter Problem With Your Device: </label></td>
+                <td style='text-align:center'><textarea name='PROBLEM' id='query' cols='30' rows='6'></textarea></td>
             </tr>
-            <tr >
-                <td rowspan="2" style="display:flex;justify-content:center;"><input type="submit" name="submit" value="Submit"></td>
+            <tr>
+                <td colspan='2' style='text-align:center;'><input type='submit' name='submit' value='Submit'></td>
             </tr>
         </table>
     </form>

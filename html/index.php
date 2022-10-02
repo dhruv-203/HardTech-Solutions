@@ -53,27 +53,27 @@ $connect = mysqli_connect("localhost","root","","users");
     </div>
 </div>
 <div class="service-panel">
-    <div class="mobile">
+    <div class="mobile" id="mob">
         <div class="img-cont" style="background-image: url(../images/mobile-repairing.png);margin-left:3.05vw;"></div>
         <div class="title"><h2>Mobiles</h2></div>
         <div class="text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sit aspernatur modi architecto! Consequuntur voluptas ipsam laboriosam in
         </div>
-        <a href="#" onclick="popup(); return false;"><button class="launch">Know More</button></a>
+        <div class="butt-cont"><button onclick="mobile(); " class="launch">Know More</button></div>
     </div>
-    <div class="laptop">
+    <div class="laptop" id="lap">
         <div class="img-cont" style="background-image: url(../images/lap_repair.png); width:67%;height:48%;" ></div>
         <div class="title"><h2>Laptops</h2></div>
         <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur harum voluptatum iusto explicabo eius doloribus quaerat veritatis </div>
-        <a href="#" onclick="return false;"><button class="launch">Know More</button></a>
+        <div class="butt-cont"><button onclick=" laptop();" class="launch">Know More</button></div>
     </div>
-    <div class="computer">
+    <div class="computer" id="com">
         <div class="img-cont" style="background-image: url(../images/pc-card-bg.png);width:80%;height:42%;"></div>
         <div class="title"><h2>PCs</h2></div>
         <div class="text">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, adipisci laboriosam, sint minima amet blanditiis possimus, quia reiciendis itaque debitis ipsum iusto enim nihil nisi?
         </div>
-        <a href="#" onclick="return false;"><button class="launch">Know More</button></a>
+        <div class="butt-cont"><button onclick="computer();" class="launch">Know More</button></div>
     </div>
 </div>
 <div class="products">
