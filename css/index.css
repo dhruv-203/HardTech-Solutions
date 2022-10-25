@@ -60,7 +60,7 @@ body{
     right:-6vw;
 }
 .nav-links-cont{
-    left: 33vw;
+    left: 49vw;
     gap: 7vw;
     position: relative;
 }
@@ -465,11 +465,14 @@ box-sizing: border-box;
 }
 
 .back{
-    height: 87px;
-    width: 87px;
+    height: 12%;
+    width: 14%;
     position: relative;
     /* top: 43px; */
-    right: 245px;
+    right: 38%;
+    background: none;
+    background-color: #10a8b8;
+    border-radius: 50%;
     background-image: url(../images/back.png);
     background-size: contain;
 }
@@ -514,4 +517,51 @@ input[type=submit]:focus{
     outline: none;
     background: #000;
     color: #fff;
+}
+footer{
+    font-family: inherit;
+    background-color: #040404;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25px;;
+}
+.mapHead{
+    font-size: 2.5rem;
+    justify-self: self-start;
+    font-family: sans-serif;
+    padding: 5px;
+
+}
+.map{
+    padding: 15px;
+    align-self: center;
+    height: 60vh;
+    width: 80vw;
+}
+.personal-info{
+    align-self: center;
+    display: flex;
+    gap:10px;
+    justify-content: space-around;
+    height: auto;
+    width: 80vw;
+    flex-wrap: wrap;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    padding: 10px;
+}
+.address,.timings{
+    padding: 10px;
+}
+.contactHead{
+    align-self: center;
+}
+.number{
+    font-size: 1rem;
 }

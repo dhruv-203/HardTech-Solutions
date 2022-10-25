@@ -1,10 +1,4 @@
-<?php
-$connect = mysqli_connect("localhost","root","","users");
-            $stmt = $connect->prepare("SELECT PRODUCT_NAME,PRODUCT_IMG,PRICE,PRODUCT_DESCRIP from MarketPlace");
-			$stmt->execute();
-			$stmt_result = $stmt->get_result();
-            $data = $stmt_result->fetch_all();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,13 +20,12 @@ $connect = mysqli_connect("localhost","root","","users");
         <ul class="navlink-cont flex-horizontal">
             <div class="brand-name-container">
                 <li class="nav-links brand-logo">
-                <a href="../html/index.php" ><img src="../images/logo.png" class="img" alt="HardTech-Solution"></a></li>
+                <a href="../html/index.html" ><img src="../images/logo.png" class="img" alt="HardTech-Solution"></a></li>
         </div>
         <div class="nav-links-cont flex-horizontal">
             <li class="nav-links"><a class="active" href="#">Home</a></li>
-            <li class="nav-links"><a href="#">Service</a></li>
-            <li class="nav-links"><a href="#">Market Place</a></li>
-            <li class="nav-links"><a href="#">About Us</a></li>
+            <li class="nav-links"><a href="#SERVICES">Service</a></li>
+            <li class="nav-links"><a href="#footer">About Us</a></li>
         </div>
         </ul>
         <div class="left"></div>
@@ -52,7 +45,7 @@ $connect = mysqli_connect("localhost","root","","users");
        <span style="font-weight: 700;">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis expedita at consequatur rerum aperiam! Fugit, labore! Minus, hic asperiores odit tempora voluptates, saepe quaerat, accusamus placeat quidem praesentium culpa! Libero fuga commodi omnis aliquam laudantium. Eius, obcaec <span style="font-weight: 700;">"</span>
     </div>
 </div>
-<div class="service-panel">
+<div class="service-panel" id="SERVICES">
     <div class="mobile" id="mob">
         <div class="img-cont" style="background-image: url(../images/mobile-repairing.png);margin-left:3.05vw;"></div>
         <div class="title"><h2>Mobiles</h2></div>
@@ -76,23 +69,27 @@ $connect = mysqli_connect("localhost","root","","users");
         <div class="butt-cont"><button onclick="computer();" class="launch">Know More</button></div>
     </div>
 </div>
-<div class="products">
-<h1 class="market_title">Market Place: </h1>
-<div class="market-place">
-    <?php for($i=0;$i<3;$i++){ ?>
-    <div class="product-cont">
-        <div class="Product-Img" ><?php echo '<img src="data:image;base64,'.base64_encode($data[$i][1]).'" style="height:100%;width:100%;" alt="img">';?></div>
-       <div class="write-up">
-       <div class="Product-Name"><b> Product-Name:</b> <?php echo $data[$i][0];?></div>
-        <div class="Product-Price"><b>Price:</b><?php echo $data[$i][2];?></div>
-        <div class="Product-Desc"><b>Description:</b><?php echo $data[$i][3];?></div>
-       </div>
+<footer id="footer">
+    <div class="mapHead">
+        Get In Touch With Us -
     </div>
-    <?php }?>
-
-</div>
-<a href="#"><button class="launch" style="padding:10px;background-color:#9db426;">Show-More</button></a>
-</div>
-
+   <div class="map"> 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.4618582782973!2d72.863322!3d21.1340104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051879b96db87%3A0xe3ea19ef0870ea3c!2sVraj%20Vihar%20Residency!5e0!3m2!1sen!2sin!4v1666161530550!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div class="personal-info">
+        <div class="contact">
+            <div class="contactHead h3 sans-serif">Contact Us</div>
+            <div class="number sans-serif">9106033690 - Sanjay Pattnaik</div>
+            <a href="tel:9106033690" class="call"><button class="callButton launch">Call US</button></a>
+        </div>
+        <div class="address contact">
+            <div class="addressHead contactHead  h3 sans-serif">Locate Us</div>
+            <div class="properAddress sans-serif" >15 Vraj Vihar Residency,<br>Opp Shantivan Residency, 150 FT, Middle Ring Rd,<br> Bhestan, Surat,<br> Gujarat 395023</div>
+        </div>
+        <div class="timings contact">
+            <div class="timingHead sans-serif h3  contactHead">Business Hours: </div>
+            <div class="hours sans-serif">Regular Timing: 9:00 AM to 6:00 PM<br>Sunday: Closed</div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

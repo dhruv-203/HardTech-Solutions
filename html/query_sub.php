@@ -1,26 +1,19 @@
 <?php
+date_default_timezone_set('Asia/Kolkata');
+$date=date('Y-m-d');
+$time=date('h:i:s');
 if(!$connect = mysqli_connect("localhost","root","","ADMIN")){
     echo mysqli_connect_error();
 }
-$que = 'INSERT INTO QUERIES(NAME,PHONE_NO,QUERY,EMAIL) VALUES(?,?,?,?)';
+$que = 'INSERT INTO QUERIES(NAME,PHONE_NO,QUERY,EMAIL,Date,Time) VALUES(?,?,?,?,?,?)';
 $prep=mysqli_prepare($connect,$que);
-if(!mysqli_stmt_bind_param($prep,'siss',$_REQUEST['NAME'],$_REQUEST['PHONE'],$_REQUEST['PROBLEM'],$_REQUEST['EMAIL'])){
+if(!mysqli_stmt_bind_param($prep,'sissss',$_REQUEST['NAME'],$_REQUEST['PHONE'],$_REQUEST['PROBLEM'],$_REQUEST['EMAIL'],$date,$time)){
     echo mysqli_stmt_error($prep);
 }
 if(!mysqli_stmt_execute($prep)){
     echo mysqli_stmt_error($prep);
 }
-else{?>
-<script> var bol = alert("Query Submitted... we will contact you soon to confirm your Problem<br>");
-    if(bol==false){
-        <?php
-         $res = mysqli_query($connect,'SELECT QUERY_NO from QUERIES WHERE PHONE_NO = "$_REQUEST[PHONE]"&& QUERY = "$_REQUEST[PROBLEM]"');
-         $output=mysqli_fetch_all($res);
-         print_r($output);
-        ?>
-    }
-    else{
-        <?php header("Location:http://localhost/HardTech-Solutions/html/");?>
-    }
-</script>
-<?php }?>
+else{
+         echo 'Your Query Has been successfully submitted...';
+    
+}?>
