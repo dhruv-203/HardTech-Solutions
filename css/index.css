@@ -12,8 +12,8 @@ html,body{
     margin: 0;padding: 0;
 }
 .firstPage{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,8 +37,8 @@ transition: scale 0.1s;
     padding: 10px 0 5px 0;
 }
 .img-bg{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     filter: blur(5px);
     z-index: 0;
     background-image: url(../images/pc-repair-bg.jpeg);
@@ -46,13 +46,11 @@ transition: scale 0.1s;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    background-position: 0vw -15vh    ;
+    /* background-position: 0vw -15vh    ; */
     -webkit-filter: blur(2.5px);
 }
 
-body{
-    overflow: scroll;
-}
+
 .navbar{
     width:100vw;
     position: fixed;
@@ -290,57 +288,21 @@ body{
     min-width:55vw;
     }
 
-    .market-place>div{
-        max-height: 55vh;
-        min-width: 700px;
-        position: relative;
-        left:38%;
-    }
-    .company-Info{
-        top:17%
-    }
-    .company-logo{
-        position: absolute;
-        left:30%;
-        width:37%;
-    }
-    .company-text{
-        position: relative;
-        top:10%;
-        
-    }
 }
+
 @media screen and (max-width:1000px) {
     .service-panel>div{
         min-width: 55vw;
     }
-    .market-place{
-        height: 50vh;
-    }
    
-    .market-place>div{
-        max-height: 500px;
-        position: relative;
-        left:38%;
-    }
     .info-box{
         font-size: 1.3rem;
     }
-    .Product-Name{
-        padding: 15px;
-        font-size: 4vw;
-    }
-    .Product-Price{
-        padding: 15px;
-        font-size: 3.8vw;
-    }
-    .Product-Desc{
-        padding: 15px;
-        font-size: 3.8vw;
-    }
+   
     .company-Info{
         height: 50vh;
-        align-content:center;
+        align-items: stretch;
+        justify-content: center;
     }
     .company-logo{
         height: 45%;
@@ -348,22 +310,32 @@ body{
     }
     .company-text{
         height: 15vh;
-        font-size: 1.3rem;
+        font-size: 2rem;
+    }
+    .brand-logo{
+        height: 8vh;
+        width: 5vw;
+        padding: 10px 0 5px 0;
     }
     .brand-tag-line{
-        font-size: 0.8rem;
+        font-size: 1rem;
         letter-spacing: 0;
     }
         .info-box{
             font-size: 1.3rem;
         }
     
-
+        .brand-name-container{
+            right: 0px;
+        }
 }
 @media screen and (max-width:500px){
     .service-panel>div{
         max-height: 470px;
         min-width: 320px;
+    }
+    .img-bg{
+    background-position-x: center;
     }
     .brand-logo{
         height: 8vh;
@@ -372,7 +344,9 @@ body{
     }
     .company-Info{
     height: 50vh;
-    align-content:center;
+    padding: 20px;
+    align-items: stretch;
+    justify-content: center;
 }
 .brand-name-container{
     right: 0px;
@@ -382,8 +356,9 @@ body{
     width:55%;
 }
 .company-text{
+    text-align: center;
     height: 15vh;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 .brand-tag-line{
     font-size: 0.8rem;
